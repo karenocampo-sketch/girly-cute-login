@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Sparkle Login — Cute & Modern</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Playfair+Display:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Barra de progreso brillante al hacer scroll -->
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+    <!-- Contenedor de brillitos de fondo -->
+    <div class="sparkles-bg" id="sparklesBg" aria-hidden="true"></div>
+
+    <!-- Botón flotante Modo Claro / Oscuro -->
+    <header class="top-bar">
+      <span class="brand-badge">🌸 SparkleClub</span>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Cambiar tema claro u oscuro"
+      >
+        <span class="theme-icon" id="themeIcon">🌙</span>
+        <span class="theme-text" id="themeText">Modo Oscuro</span>
+      </button>
+    </header>
+
+    <!-- SECCIÓN 1: LOGIN PRINCIPAL -->
+    <main class="hero-login">
+      <div class="floating-orb orb-1" data-parallax="0.18"></div>
+      <div class="floating-orb orb-2" data-parallax="-0.14"></div>
+      <div class="floating-orb orb-3" data-parallax="0.22"></div>
+
+      <section class="login-card" id="loginCard">
+        <div class="card-ribbon">✨ VIP Access ✨</div>
+        <div class="avatar-bubble">🎀</div>
+        <h1>¡Hola de nuevo!</h1>
+        <p class="subtitle">Inicia sesión en tu espacio mágico</p>
+
+        <form id="loginForm" novalidate>
+          <div class="input-group">
+            <label for="email">Correo electrónico</label>
+            <div class="input-wrapper">
+              <span class="input-icon">💌</span>
+              <input
+                type="email"
+                id="email"
+                placeholder="tu.nombre@sparkle.com"
+                required
+              />
+            </div>
+            <small class="error-msg" id="emailError"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Contraseña</label>
+            <div class="input-wrapper">
+              <span class="input-icon">🔐</span>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-pass"
+                id="togglePass"
+                title="Mostrar contraseña"
+              >
+                👁️
+              </button>
+            </div>
+            <small class="error-msg" id="passError"></small>
+          </div>
+
+          <div class="form-options">
+            <label class="cute-checkbox">
+              <input type="checkbox" id="rememberMe" checked />
+              <span>Recordarme ✨</span>
+            </label>
+            <a href="#features" class="forgot-link">Ver sorpresas ↓</a>
+          </div>
+
+          <button type="submit" class="btn-sparkle" id="submitBtn">
+            <span>Entrar con magia</span>
+            <span class="btn-stars">✦ ✧ ✦</span>
+          </button>
+
+          <div class="status-banner" id="statusBanner" role="status"></div>
+        </form>
+      </section>
+
+      <a href="#features" class="scroll-hint">
+        <span>Desliza para descubrir más</span>
+        <div class="mouse-icon"><div class="wheel"></div></div>
+      </a>
+    </main>
+
+    <!-- SECCIÓN 2: FUNCIONALIDADES DIVERTIDAS AL HACER SCROLL -->
+    <section class="features-section" id="features">
+      <div class="section-header reveal">
+        <span class="pill-tag">💖 Experiencia Interactiva</span>
+        <h2>Un diseño hecho con brillo y detalle</h2>
+        <p>Sigue bajando para ver las animaciones activarse con tu scroll.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="feature-card reveal" style="--delay: 0.1s">
+          <div class="feature-icon">🫧</div>
+          <h3>Glassmorphism Pastel</h3>
+          <p>
+            Tarjetas translúcidas con desenfoque suave, bordes iluminados y
+            sombras rosadas.
+          </p>
+        </article>
+
+        <article class="feature-card reveal" style="--delay: 0.25s">
+          <div class="feature-icon">🌗</div>
+          <h3>Modo Día & Noche</h3>
+          <p>
+            Cambia entre estética Cotton Candy luminosa y Berry Night con un
+            solo clic.
+          </p>
+        </article>
+
+        <article class="feature-card reveal" style="--delay: 0.4s">
+          <div class="feature-icon">✨</div>
+          <h3>Rastro de Brillitos</h3>
+          <p>
+            Mueve el mouse o haz clic en la pantalla para lanzar destellos
+            mágicos.
+          </p>
+        </article>
+      </div>
+
+      <!-- Tarjeta interactiva extra con contador de vibra -->
+      <div class="vibe-meter-card reveal">
+        <h3>🎀 Medidor de Vibe del Día</h3>
+        <p id="vibeQuote">"Hoy es un gran día para programar cosas lindas."</p>
+        <button type="button" class="btn-secondary" id="newVibeBtn">
+          ✨ Generar nueva frase cute
+        </button>
+      </div>
+    </section>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="back-to-top" id="backToTop" title="Volver arriba">↑</button>
+
+    <footer class="footer">
+      <p>Hecho con 💖, CSS moderno y muchos brillitos ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
